@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PlaceMemo">
         <activity
-            android:name=".MainActivity"
+            android:name=".view.ui.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.PlaceMemo.NoActionBar">
             <intent-filter>
