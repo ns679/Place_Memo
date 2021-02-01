@@ -6,9 +6,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.placememo.databinding.ItemListBinding
 import com.example.placememo.service.model.Memo
+import com.example.placememo.viewmodel.ListViewModel
 
-class MemoListAdapter(private val viewModel: ListViewModel,private val context: Context?) :
+class MemoListAdapter(private val viewModel: ListViewModel, private val context: Context?) :
     ListAdapter<Memo, MemoListAdapter.ViewHolder>(UserListDiffCallback()) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder.from(parent,context)
@@ -19,7 +21,7 @@ class MemoListAdapter(private val viewModel: ListViewModel,private val context: 
         holder.bind(viewModel,item)
     }
 
-    class ViewHolder(private val binding: ItemListBinding,private val context: Context?) :
+    class ViewHolder(private val binding: ItemListBinding, private val context: Context?) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(viewModel:ListViewModel,item:Memo){
             binding.viewModel = viewModel

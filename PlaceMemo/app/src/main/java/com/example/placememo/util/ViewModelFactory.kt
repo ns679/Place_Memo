@@ -3,6 +3,9 @@ package com.example.placememo.util
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.placememo.service.repository.MemoRepository
+import com.example.placememo.viewmodel.AddViewModel
+import com.example.placememo.viewmodel.DetailViewModel
+import com.example.placememo.viewmodel.ListViewModel
 
 @Suppress("UNCHECKED_CAST")
 class ViewModelFactory(private val memoRepository: MemoRepository

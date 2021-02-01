@@ -3,26 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/ListFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.placememo.view.ui.FirstFragment"
+        android:id="@+id/ListFragment"
+        android:name="com.example.placememo.view.ui.ListFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
+        tools:layout="@layout/fragment_list">
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_ListFragment_to_AddFragment"
+            app:destination="@id/AddFragment" />
+        <action
+            android:id="@+id/action_ListFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.placememo.view.ui.SecondFragment"
+        android:id="@+id/AddFragment"
+        android:name="com.example.placememo.view.ui.AddFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
+        tools:layout="@layout/fragment_add">
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_AddFragment_to_ListFragment"
+            app:destination="@id/ListFragment"
+            app:popUpTo="@id/ListFragment"
+            app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.placememo.view.ui.DetailFragment"
+        android:label="DetailFragment" />
 </navigation>
