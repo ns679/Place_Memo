@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/ListFragment"
         android:name="com.example.placememo.view.ui.ListFragment"
-        android:label="ListFragment">
+        android:label="PlaceMemo">
         <action
             android:id="@+id/action_ListFragment_to_AddFragment"
             app:destination="@id/AddFragment"/>
@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/AddFragment"
         android:name="com.example.placememo.view.ui.AddFragment"
-        android:label="AddFragment">
+        android:label="AddMemo">
         <action
             android:id="@+id/action_AddFragment_to_ListFragment"
             app:destination="@id/ListFragment"
@@ -28,7 +28,7 @@
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.example.placememo.view.ui.DetailFragment"
-        android:label="DetailFragment" >
+        android:label="DetailMemo" >
         <argument
             android:name="memoId"
             app:argType="string" />
