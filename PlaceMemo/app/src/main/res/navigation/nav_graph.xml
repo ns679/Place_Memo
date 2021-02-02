@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/ListFragment">
 
     <fragment
         android:id="@+id/ListFragment"
         android:name="com.example.placememo.view.ui.ListFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_list">
+        android:label="ListFragment">
         <action
             android:id="@+id/action_ListFragment_to_AddFragment"
-            app:destination="@id/AddFragment" />
+            app:destination="@id/AddFragment"/>
         <action
             android:id="@+id/action_ListFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
@@ -20,8 +18,7 @@
     <fragment
         android:id="@+id/AddFragment"
         android:name="com.example.placememo.view.ui.AddFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_add">
+        android:label="AddFragment">
         <action
             android:id="@+id/action_AddFragment_to_ListFragment"
             app:destination="@id/ListFragment"
@@ -31,5 +28,9 @@
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.example.placememo.view.ui.DetailFragment"
-        android:label="DetailFragment" />
+        android:label="DetailFragment" >
+        <argument
+            android:name="memoId"
+            app:argType="string" />
+    </fragment>
 </navigation>

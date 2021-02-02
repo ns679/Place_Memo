@@ -49,7 +49,7 @@ class ListFragment : Fragment() {
             .actionListFragmentToAddFragment()
         findNavController().navigate(action)
     }
-    private fun navigateToDetailFragment(memoId:String){
+    private fun navigateToDetailFragment(memoId:String) {
         val action = ListFragmentDirections
             .actionListFragmentToDetailFragment(memoId)
         findNavController().navigate(action)
