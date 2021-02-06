@@ -19,10 +19,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        val navController: NavController = findNavController(R.id.nav_host_fragment)
-        appBarConfiguration=
-            AppBarConfiguration.Builder(R.id.ListFragment).build()
+        val navController = findNavController(R.id.nav_host_fragment)
+        val appBarConfiguration= AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController,appBarConfiguration)
-
     }
+
+    override fun onSupportNavigateUp() = findNavController(R.id.nav_host_fragment).navigateUp()
 }

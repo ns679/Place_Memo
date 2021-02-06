@@ -7,13 +7,14 @@
     <fragment
         android:id="@+id/ListFragment"
         android:name="com.example.placememo.view.ui.ListFragment"
-        android:label="PlaceMemo">
+        android:label="Memo">
         <action
             android:id="@+id/action_ListFragment_to_AddFragment"
             app:destination="@id/AddFragment"/>
         <action
             android:id="@+id/action_ListFragment_to_detailFragment"
-            app:destination="@id/detailFragment" />
+            app:destination="@id/detailFragment"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/AddFragment"
@@ -23,7 +24,7 @@
             android:id="@+id/action_AddFragment_to_ListFragment"
             app:destination="@id/ListFragment"
             app:popUpTo="@id/ListFragment"
-            app:popUpToInclusive="true" />
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
