@@ -4,7 +4,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.placememo.viewmodel.DetailViewModel" />
+            type="com.aaa165.placememo.viewmodel.DetailViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

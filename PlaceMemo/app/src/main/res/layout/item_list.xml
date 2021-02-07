@@ -6,11 +6,11 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.placememo.viewmodel.ListViewModel" />
+            type="com.aaa165.placememo.viewmodel.ListViewModel" />
 
         <variable
             name="memo"
-            type="com.example.placememo.service.model.Memo" />
+            type="com.aaa165.placememo.service.model.Memo" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
